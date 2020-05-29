@@ -20,11 +20,13 @@ import Disease from '../../components/Card';
 
 const Home = () => {
   const [cases, setCases] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     async function loadData() {
       const { data } = await api.get('/summary');
       setCases(data);
+      setLoading(true);
     }
 
     loadData()
@@ -32,9 +34,13 @@ const Home = () => {
 
   const navigation = useNavigation();
 
-  const navigateToGlobal = () => {
-    navigation.navigate('World', { world: cases.Global });
+  function navigateToGlobal() {
+    navigation.navigate('World', { world: cases.Global, loading });
   };
+
+  function navigateToCountries() {
+    navigation.navigate('Countries', { countries: cases.Countries, loading });
+  }
 
   return (
       <Container>
@@ -59,7 +65,7 @@ const Home = () => {
                     <Icon name="public" color="#fff" size={16} />
                     <BtnText>World</BtnText>
                 </StatisticBtn>
-                <StatisticBtn>
+                <StatisticBtn onPress={navigateToCountries} >
                     <Icon name="flag" color="#fff" size={16} />
                     <BtnText>Countries</BtnText>
                 </StatisticBtn>
