@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useNavigation } from '@react-navigation/native';
 
+import api from '../../services/api';
 import Icon from '@expo/vector-icons/MaterialIcons';
 
 import { 
@@ -18,10 +19,21 @@ import {
 import Disease from '../../components/Card';
 
 const Home = () => {
+  const [cases, setCases] = useState([])
+
+  useEffect(() => {
+    async function loadData() {
+      const { data } = await api.get('/summary');
+      setCases(data);
+    }
+
+    loadData()
+  }, [])
+
   const navigation = useNavigation();
 
   const navigateToGlobal = () => {
-    navigation.navigate('World');
+    navigation.navigate('World', { world: cases.Global });
   };
 
   return (
