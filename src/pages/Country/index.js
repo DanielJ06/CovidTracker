@@ -4,6 +4,7 @@ import { useRoute } from '@react-navigation/native';
 import { PieChart  } from 'react-native-svg-charts'
 
 import Icon from '@expo/vector-icons/FontAwesome5';
+import GoBack from '../../components/GoBack';
 
 import { 
     Container,
@@ -44,6 +45,7 @@ const Country = () => {
   return (
       <Container>
         <Content>
+          <GoBack />
           <HeaderArea>
             <Title>{countryData.Country} overview</Title>
           </HeaderArea>

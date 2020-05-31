@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "coronaTracker",
-    "slug": "coronaTracker",
+    "name": "CoronaTracker",
+    "slug": "coronatracker",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,9 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "sdkVersion": "37.0.0",
+    "description": "Coronavirus Tracker",
+    "githubUrl": "https://github.com/DanielJ06/CovidTracker"
   }
 }

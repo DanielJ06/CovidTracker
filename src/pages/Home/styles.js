@@ -11,6 +11,7 @@ export const InfoCard = styled.View`
     background-color: #3a4750;
     border-radius: 18px;
     padding: 30px 20px;
+    margin-top: 35px;
 `;
 
 export const InfoTitle = styled.Text`

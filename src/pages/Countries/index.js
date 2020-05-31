@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from '@expo/vector-icons/FontAwesome5';
+import GoBack from '../../components/GoBack';
 
 import { 
   Container,
@@ -35,6 +36,7 @@ const Countries = () => {
   return (
     <Container>
       <SearchArea>
+        <GoBack />
         <Label>Filter by specific country:</Label>
         <SearchInput 
           placeholder="Ex: Brazil"

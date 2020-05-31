@@ -11,6 +11,7 @@ export const Content = styled.View`
     background-color: #3a4750;
     border-radius: 18px;
     padding: 30px 20px;
+    margin-top: 35px;
 `;
 
 export const HeaderArea = styled.View`

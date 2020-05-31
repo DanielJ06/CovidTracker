@@ -28,6 +28,7 @@ export const List = styled.FlatList`
 `;
 
 export const SearchArea = styled.View`
+    margin-top: 35px;
     background-color: #3a4750;
     padding: 18px;
     border-radius: 18px;

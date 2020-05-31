@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 function Routes() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="World" component={World} />
             <Stack.Screen name="Countries" component={Countries} />
